@@ -30,6 +30,8 @@
 
 // export default Products1;
 
+
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "../../Components/Card/Card";
@@ -40,9 +42,9 @@ const Products1 = () => {
 
   const fetchData = async () => {
     try {
-      // fetch from public/db.json
+      // Fetch products array from db.json
       const res = await axios.get("/db.json");
-      setProducts(res.data.products || []); // adjust based on your db.json structure
+      setProducts(res.data.products || []);
     } catch (error) {
       console.error("Error fetching products1:", error);
     }
@@ -62,6 +64,3 @@ const Products1 = () => {
 };
 
 export default Products1;
-
-
-

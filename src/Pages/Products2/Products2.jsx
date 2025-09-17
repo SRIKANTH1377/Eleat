@@ -61,6 +61,7 @@
 // export default Products2;
 
 
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCarousel from "./Productcarousel";
@@ -73,9 +74,9 @@ const Products2 = () => {
 
   const fetchData = async () => {
     try {
-      // fetch from public/products2.json
+      // Fetch products2 array from db.json
       const res = await axios.get("/db.json");
-      setProducts(Array.isArray(res.data) ? res.data : []);
+      setProducts(res.data.products2 || []);
     } catch (err) {
       console.error("Error fetching products2:", err);
       setProducts([]);
@@ -103,7 +104,7 @@ const Products2 = () => {
         </button>
       </div>
 
-      {/* pass products into carousel */}
+      {/* Carousel now receives products2 */}
       <ProductCarousel products={products} />
 
       <div className="pickup">
