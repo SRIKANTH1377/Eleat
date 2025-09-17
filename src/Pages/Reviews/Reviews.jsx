@@ -51,12 +51,20 @@ import './reviews.css';
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
 
+  // useEffect(() => {
+  //   axios
+  //     .get('/db.json') // fetch from public/db.json
+  //     .then((res) => setReviews(res.data.reviews || []))
+  //     .catch((err) => console.error('Error loading reviews:', err));
+  // }, []);
+
   useEffect(() => {
-    axios
-      .get('/db.json') // fetch from public/db.json
-      .then((res) => setReviews(res.data.reviews || []))
-      .catch((err) => console.error('Error loading reviews:', err));
-  }, []);
+  axios
+    .get('https://my-json-server.onrender.com/reviews')
+    .then((res) => setReviews(res.data))
+    .catch((err) => console.error('Error loading reviews:', err));
+}, []);
+
 
   const renderStars = (count) =>
     '★★★★★'.slice(0, count) + '☆☆☆☆☆'.slice(0, 5 - count);
