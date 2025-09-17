@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Card from "../../Components/Card/Card";
-import "./productCarousel.css";
+import "./productcarousel.css";
 
 const ProductCarousel = ({ products = [] }) => {
   const itemsPerPage = 4;
