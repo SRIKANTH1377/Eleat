@@ -1,5 +1,5 @@
 import React from "react";
-import "./Spstory.css";
+import "./spstory.css";
 
 const Spstory = () => {
   return (
