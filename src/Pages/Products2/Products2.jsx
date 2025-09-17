@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import ProductCarousel from "./ProductCarousel";
+import ProductCarousel from "./Productcarousel";
 import { useNavigate } from "react-router-dom"; 
 import "./products2.css";
 
