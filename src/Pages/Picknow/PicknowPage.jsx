@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./pickNowPage.css";
+import "./picknowpage.css";
 
 const PickNowPage = () => {
   const [products, setProducts] = useState([]);
