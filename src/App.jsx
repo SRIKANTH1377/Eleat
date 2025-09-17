@@ -143,11 +143,11 @@ import Story from "./Pages/Story/Story";
 import Spstory from "./Pages/Story/Spstory";
 import Videos from "./Pages/Videos/Videos";
 import Footer from "./Components/Footer/Footer";
-import SingleProduct from "./Components/SingleProduct/SingleProduct";
+import SingleProduct from "./Components/Singleproduct/Singleproduct";
 import About from "./Components/About/About";
 import Login from "./Components/Login/Login";
 import Register from "./Components/Registration/Registration";
-import PickNowPage from "./Pages/Picknow/PickNowPage";
+import PickNowPage from "./Pages/Picknow/PicknowPage";
 
 const App = () => {
   return (
