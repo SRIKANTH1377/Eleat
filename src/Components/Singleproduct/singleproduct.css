@@ -1,0 +1,162 @@
+.single-product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.single-product-image-container {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-product-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.single-product-info {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.product-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-grams,
+.product-price {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.product-ingredients,
+.product-benefits {
+  margin-top: 15px;
+}
+
+.product-ingredients h3,
+.product-benefits h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.product-ingredients ul,
+.product-benefits ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.product-ingredients li,
+.product-benefits li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.buy-now-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buy-now-btn:hover {
+  background-color: #0eb4eb;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.not-found {
+  text-align: center;
+  font-size: 1.5rem;
+  color: red;
+  margin-top: 50px;
+}
+
+.cart-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.add-to-cart-btn,
+.remove-from-cart-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.add-to-cart-btn:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.remove-from-cart-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.remove-from-cart-btn:hover:not(:disabled) {
+  background-color: #c82333;
+}
+
+.add-to-cart-btn:disabled,
+.remove-from-cart-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+@media (max-width: 900px) {
+  .single-product-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .single-product-info {
+    text-align: center;
+  }
+
+  .product-ingredients ul,
+  .product-benefits ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+}

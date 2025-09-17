@@ -1,0 +1,69 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.video-wrapper {
+  top: 0;     
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.fullscreen-video {
+  width: 100%;
+  height: 510px;
+  object-fit: cover;
+  display: block;
+}
+
+.content-overlay {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.content-overlay h1 {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.content-overlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.content-overlay button {
+    width: 350px;
+    height: 50px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border: none;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.content-overlay h5, .content-overlay p {
+  margin: 0;
+  font-weight: 500;
+}
+
+
+
+
+

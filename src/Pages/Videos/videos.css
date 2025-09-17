@@ -1,0 +1,131 @@
+.videos {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 30px;
+  background-color: #f9f9f9;
+}
+
+.video-container {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  background: #000;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.video-container:hover {
+  transform: scale(1.03);
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background: rgba(0, 191, 255, 0.8); 
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-button::before {
+  content: '';
+  border-style: solid;
+  border-width: 14px 0 14px 24px;
+  border-color: transparent transparent transparent white;
+  margin-left: 5px;
+}
+
+h1 {
+  text-align: center;     
+  font-size: 44px;        
+  margin: 40px 0 20px;      
+  font-family: "Helvetica Neue", Arial, sans-serif; 
+  color: #222;              
+}
+
+
+@media (max-width: 768px) {
+  .video-container {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+
+  .play-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .play-button::before {
+    border-width: 10px 0 10px 16px;
+  }
+}
+
+
+
+
+.marque1 {
+  display: flex;
+  gap: 20px;
+  animation: scroll-marquee 30s linear infinite;
+  width: max-content;
+  padding: 20px 0;
+}
+
+.marque1 img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.marque1 img:hover {
+  transform: scale(1.05);
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 10px 0;
+  position: relative;
+}
+
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-wrapper:hover .marque1 {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .marque1 img {
+    width: 100px;
+    height: 100px;
+  }
+}
