@@ -9,13 +9,16 @@ const Products2 = () => {
   const navigate = useNavigate();
 
   const fetchData = async () => {
-    try {
-      const res = await axios.get("http://localhost:8081/products2");
-      setProducts(Array.isArray(res.data) ? res.data : []);
-    } catch (err) {
-      console.error("Error fetching products2:", err);
-      setProducts([]);
-    }
+    // try {
+    //   const res = await axios.get("http://localhost:8081/products2");
+    //   setProducts(Array.isArray(res.data) ? res.data : []);
+    // } catch (err) {
+    //   console.error("Error fetching products2:", err);
+    //   setProducts([]);
+    // }
+    const res = await axios.get("/db.json");
+setProducts(res.data.products2 || []); // adjust based on structure
+
   };
 
   useEffect(() => {
