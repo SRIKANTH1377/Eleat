@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Navbar1.css';
+import './navbar1.css';
 
 export default function Navbar1({ cartCount = 0 }) {
   return (
