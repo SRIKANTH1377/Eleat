@@ -47,14 +47,15 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './reviews.css';
+import data from "../../db.js"
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
 
   async function getData() {
-    const dbData = await fetch("../../../db.json");
-    const res = await dbData.json();
-    setReviews(res.reviews || [])
+    // const dbData = await fetch("../../../db.json");
+    // const res = await dbData.json();
+    setReviews(data.reviews || [])
   }
 
   useEffect(() => {

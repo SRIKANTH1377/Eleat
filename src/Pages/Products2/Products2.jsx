@@ -67,6 +67,7 @@ import axios from "axios";
 import ProductCarousel from "./Productcarousel";
 import { useNavigate } from "react-router-dom"; 
 import "./products2.css";
+import data from "../../db.js"
 
 const Products2 = () => {
   const [products, setProducts] = useState([]);
@@ -75,9 +76,9 @@ const Products2 = () => {
   const fetchData = async () => {
     try {
       // Fetch products2 array from db.json
-      const dbData = await fetch("../../../db.json");
-      const res = await dbData.json();   
-      setProducts(res.products2 || []);
+      // const dbData = await fetch("../../../db.json");
+      // const res = await dbData.json();   
+      setProducts(data.products2 || []);
     } catch (err) {
       console.error("Error fetching products2:", err);
       setProducts([]);
