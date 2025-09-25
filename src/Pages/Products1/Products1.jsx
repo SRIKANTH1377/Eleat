@@ -45,7 +45,7 @@ const Products1 = () => {
     try {
       // Fetch products array from db.json
       // const res = await axios.get(`${process.env.PUBLIC_URL}/db.json`);
-      const dbData = await fetch("../../../db.json");
+      const dbData = await fetch("/db.json");
       const res = await dbData.json();   
       setProducts(res.products || []);
     } catch (error) {
