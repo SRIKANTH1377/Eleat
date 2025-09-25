@@ -37,14 +37,17 @@ import axios from "axios";
 import Card from "../../Components/Card/Card";
 import "./products1.css";
 
+
 const Products1 = () => {
   const [products, setProducts] = useState([]);
 
   const fetchData = async () => {
     try {
       // Fetch products array from db.json
-      const res = await axios.get("/db.json");
-      setProducts(res.data.products || []);
+      // const res = await axios.get(`${process.env.PUBLIC_URL}/db.json`);
+      const dbData = await fetch("../../../db.json");
+      const res = await dbData.json();   
+      setProducts(res.products || []);
     } catch (error) {
       console.error("Error fetching products1:", error);
     }
@@ -56,7 +59,7 @@ const Products1 = () => {
 
   return (
     <div className="products1-container">
-      {products.map((item) => (
+      {[].map((item) => (
         <Card key={item.id} data={item} />
       ))}
     </div>

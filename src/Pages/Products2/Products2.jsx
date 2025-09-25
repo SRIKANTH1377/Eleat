@@ -75,8 +75,9 @@ const Products2 = () => {
   const fetchData = async () => {
     try {
       // Fetch products2 array from db.json
-      const res = await axios.get("/db.json");
-      setProducts(res.data.products2 || []);
+      const dbData = await fetch("../../../db.json");
+      const res = await dbData.json();   
+      setProducts(res.products2 || []);
     } catch (err) {
       console.error("Error fetching products2:", err);
       setProducts([]);
