@@ -61,7 +61,7 @@ const Products1 = () => {
 
   return (
     <div className="products1-container">
-      {[].map((item) => (
+      {products.map((item) => (
         <Card key={item.id} data={item} />
       ))}
     </div>
