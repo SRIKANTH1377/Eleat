@@ -124,7 +124,6 @@
     height: 60px;
 }
 
-/* ✅ Popup Box */
 .popup-box {
   position: fixed;
   top: 20px;
@@ -162,7 +161,6 @@
   background: #444;
 }
 
-/* Animation for popup */
 @keyframes fadeInDown {
   from {
     opacity: 0;

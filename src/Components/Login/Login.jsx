@@ -11,7 +11,7 @@ const Login = () => {
     e.preventDefault();
 
     alert(`Logged in as ${email}`);
-    navigate("/"); // Redirect to homepage after login
+    navigate("/");
   };
 
   return (

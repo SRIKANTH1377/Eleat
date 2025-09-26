@@ -23,7 +23,7 @@ const PickNowPage = () => {
 
   const handleAddToBundle = (product) => {
     setBundle((prev) => [...prev, product]);
-    setIsDrawerOpen(true); // open drawer when item added
+    setIsDrawerOpen(true);
   };
 
   const handleRemoveFromBundle = (id) => {
@@ -49,7 +49,6 @@ const PickNowPage = () => {
         ))}
       </div>
 
-      {/* Drawer / Bundle Container */}
       <div className={`bundle-drawer ${isDrawerOpen ? "open" : ""}`}>
         <div className="bundle-header">
           <h2>Your Bundle</h2>

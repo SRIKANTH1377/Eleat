@@ -95,3 +95,35 @@
     font-size: 13px;
   }
 }
+
+.review-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.review-row .review {
+  flex: 1;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.review-row .arrow {
+  font-size: 20px;
+  padding: 6px 12px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.review-row .arrow:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
